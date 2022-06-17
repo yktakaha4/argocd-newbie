@@ -5,7 +5,7 @@ https://argo-cd.readthedocs.io/en/stable/getting_started/
 ```
 # install
 minikube delete && minikube start
-k apply -k ./base/
+k apply -k ./base/argocd/
 
 # install argo cli
 # https://github.com/argoproj/argo-workflows/releases
@@ -21,7 +21,7 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 argocd login "localhost:8080"
 
 # add sample repository
-argocd app create guestbook --repo https://github.com/argoproj/argocd-example-apps.git --path guestbook --dest-server https://kubernetes.default.svc --dest-namespace default
+argocd app create guestbook --repo https://github.com/yktakaha4/argocd-newbie.git --path base/guestbook --dest-server https://kubernetes.default.svc --dest-namespace default
 
 # check ui
 # https://localhost:8080
