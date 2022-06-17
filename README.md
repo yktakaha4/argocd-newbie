@@ -5,7 +5,6 @@ https://argo-cd.readthedocs.io/en/stable/getting_started/
 ```
 # install
 minikube delete && minikube start
-minikube addons enable ingress
 k apply -k ./base/argocd/
 
 # install argo cli
@@ -33,4 +32,6 @@ argocd app get guestbook
 # sync app
 argocd app sync guestbook
 
+# access service
+minikube service guestbook-ui --url
 ```
