@@ -1,3 +1,9 @@
 [submodule "argocd-example-apps"]
 	path = argocd-example-apps
 	url = git@github.com:argoproj/argocd-example-apps.git
+[submodule "docs/bookinfo"]
+	path = docs/bookinfo
+	url = https://gitlab.com/cloudnative_impress/bookinfo.git
+[submodule "docs/bookinfo-manifests"]
+	path = docs/bookinfo-manifests
+	url = https://gitlab.com/cloudnative_impress/bookinfo-manifests.git
